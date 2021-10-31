@@ -21,13 +21,13 @@ def ShowSelectedElement(draw, box, width, height, boxColor):
 
 # Displays information about a block returned by text detection and text analysis
 def DisplayBlockInformation(block):
-    # print('Id: {}'.format(block['Id']))
-    # if 'Text' in block:
-    #     print('    Detected: ' + block['Text'])
-    # print('    Type: ' + block['BlockType'])
+    print('Id: {}'.format(block['Id']))
+    if 'Text' in block:
+        print('    Detected: ' + block['Text'])
+    print('    Type: ' + block['BlockType'])
    
-    # if 'Confidence' in block:
-    #     print('    Confidence: ' + "{:.2f}".format(block['Confidence']) + "%")
+    if 'Confidence' in block:
+        print('    Confidence: ' + "{:.2f}".format(block['Confidence']) + "%")
 
     if block['BlockType'] == "LINE":
         print('\033[94m' + block["Text"] + '\033[0,')
